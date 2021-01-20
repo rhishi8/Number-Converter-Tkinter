@@ -12,25 +12,35 @@ cvs.create_window(60, 30, window = lbl2)
 
 # Function fro entry in binary number
 def b2(event):
-    n10 = b2b10(int(ent2.get()))
-    ent10.delete(0, tk.END)
-    ent10.insert(0, str(n10))
-    
-    n3 = b10b3(n10)
-    ent3.delete(0, tk.END)
-    ent3.insert(0, str(n3))
-    
-    n8 = b10b8(n10)
-    ent8.delete(0, tk.END)
-    ent8.insert(0, str(n8))
-    
-    n12 = b10b12(n10)
-    ent12.delete(0, tk.END)
-    ent12.insert(0, str(n12))
-    
-    n16 = b10b16(n10)
-    ent16.delete(0, tk.END)
-    ent16.insert(0, str(n16))
+    try:
+        n10 = b2b10(int(ent2.get()))
+        if n10 != -1:
+            ent10.delete(0, tk.END)
+            ent10.insert(0, str(n10))
+            
+            n3 = b10b3(n10)
+            ent3.delete(0, tk.END)
+            ent3.insert(0, str(n3))
+            
+            n8 = b10b8(n10)
+            ent8.delete(0, tk.END)
+            ent8.insert(0, str(n8))
+            
+            n12 = b10b12(n10)
+            ent12.delete(0, tk.END)
+            ent12.insert(0, str(n12))
+            
+            n16 = b10b16(n10)
+            ent16.delete(0, tk.END)
+            ent16.insert(0, str(n16))
+        else:
+            lbl_not = tk.Label(win, text = 'It is not a Binary Number!')
+            cvs.create_window(130, 100, window = lbl_not)
+            lbl_not.after(2000, lambda: lbl_not.destroy())
+    except ValueError:
+        lbl_not = tk.Label(win, text = 'It is not a Binary Number!')
+        cvs.create_window(130, 100, window = lbl_not)
+        lbl_not.after(2000, lambda: lbl_not.destroy())
 
 # Entry window for Binary
 ent2 = tk.Entry(win)
@@ -43,25 +53,35 @@ cvs.create_window(60, 60, window = lbl3)
 
 # Function fro entry in ternary number
 def b3(event):
-    n10 = b3b10(int(ent3.get()))
-    ent10.delete(0, tk.END)
-    ent10.insert(0, str(n10))
-    
-    n2 = b10b2(n10)
-    ent2.delete(0, tk.END)
-    ent2.insert(0, str(n2))
-    
-    n8 = b10b8(n10)
-    ent8.delete(0, tk.END)
-    ent8.insert(0, str(n8))
-    
-    n12 = b10b12(n10)
-    ent12.delete(0, tk.END)
-    ent12.insert(0, str(n12))
-    
-    n16 = b10b16(n10)
-    ent16.delete(0, tk.END)
-    ent16.insert(0, str(n16))
+    try:
+        n10 = b3b10(int(ent3.get()))
+        if n10 != -1:
+            ent10.delete(0, tk.END)
+            ent10.insert(0, str(n10))
+            
+            n2 = b10b2(n10)
+            ent2.delete(0, tk.END)
+            ent2.insert(0, str(n2))
+            
+            n8 = b10b8(n10)
+            ent8.delete(0, tk.END)
+            ent8.insert(0, str(n8))
+            
+            n12 = b10b12(n10)
+            ent12.delete(0, tk.END)
+            ent12.insert(0, str(n12))
+            
+            n16 = b10b16(n10)
+            ent16.delete(0, tk.END)
+            ent16.insert(0, str(n16))
+        else:
+            lbl_not = tk.Label(win, text = 'It is not a Ternary Number!')
+            cvs.create_window(130, 100, window = lbl_not)
+            lbl_not.after(2000, lambda: lbl_not.destroy())
+    except ValueError:
+        lbl_not = tk.Label(win, text = 'It is not a Ternary Number!')
+        cvs.create_window(130, 100, window = lbl_not)
+        lbl_not.after(2000, lambda: lbl_not.destroy())
 
 # Entry window for Ternary
 ent3 = tk.Entry(win)
@@ -74,25 +94,35 @@ cvs.create_window(60, 90, window = lbl8)
 
 # Function fro entry in octal number
 def b8(event):
-    n10 = b8b10(int(ent8.get()))
-    ent10.delete(0, tk.END)
-    ent10.insert(0, str(n10))
-    
-    n2 = b10b2(n10)
-    ent2.delete(0, tk.END)
-    ent2.insert(0, str(n2))
-    
-    n3 = b10b3(n10)
-    ent3.delete(0, tk.END)
-    ent3.insert(0, str(n3))
-    
-    n12 = b10b12(n10)
-    ent12.delete(0, tk.END)
-    ent12.insert(0, str(n12))
-    
-    n16 = b10b16(n10)
-    ent16.delete(0, tk.END)
-    ent16.insert(0, str(n16))
+    try:
+        n10 = b8b10(int(ent8.get()))
+        if n10 != -1:
+            ent10.delete(0, tk.END)
+            ent10.insert(0, str(n10))
+            
+            n2 = b10b2(n10)
+            ent2.delete(0, tk.END)
+            ent2.insert(0, str(n2))
+            
+            n3 = b10b3(n10)
+            ent3.delete(0, tk.END)
+            ent3.insert(0, str(n3))
+            
+            n12 = b10b12(n10)
+            ent12.delete(0, tk.END)
+            ent12.insert(0, str(n12))
+            
+            n16 = b10b16(n10)
+            ent16.delete(0, tk.END)
+            ent16.insert(0, str(n16))
+        else:
+            lbl_not = tk.Label(win, text = 'It is not an Octal Number!')
+            cvs.create_window(130, 100, window = lbl_not)
+            lbl_not.after(2000, lambda: lbl_not.destroy())
+    except ValueError:
+        lbl_not = tk.Label(win, text = 'It is not an Octal Number!')
+        cvs.create_window(130, 100, window = lbl_not)
+        lbl_not.after(2000, lambda: lbl_not.destroy())
 
 # Entry window for Octal
 ent8 = tk.Entry(win)
@@ -105,27 +135,32 @@ cvs.create_window(60, 120, window = lbl10)
 
 # Function fro entry in decimal number
 def b10(event):
-    n10 = int(int(ent10.get()))
+    try:
+        n10 = int(ent10.get())
 
-    n2 = b10b2(n10)
-    ent2.delete(0, tk.END)
-    ent2.insert(0, str(n2))
+        n2 = b10b2(n10)
+        ent2.delete(0, tk.END)
+        ent2.insert(0, str(n2))
 
-    n3 = b10b3(n10)
-    ent3.delete(0, tk.END)
-    ent3.insert(0, str(n3))
-    
-    n8 = b10b8(n10)
-    ent8.delete(0, tk.END)
-    ent8.insert(0, str(n8))
-    
-    n12 = b10b12(n10)
-    ent12.delete(0, tk.END)
-    ent12.insert(0, str(n12))
-    
-    n16 = b10b16(n10)
-    ent16.delete(0, tk.END)
-    ent16.insert(0, str(n16))
+        n3 = b10b3(n10)
+        ent3.delete(0, tk.END)
+        ent3.insert(0, str(n3))
+        
+        n8 = b10b8(n10)
+        ent8.delete(0, tk.END)
+        ent8.insert(0, str(n8))
+        
+        n12 = b10b12(n10)
+        ent12.delete(0, tk.END)
+        ent12.insert(0, str(n12))
+        
+        n16 = b10b16(n10)
+        ent16.delete(0, tk.END)
+        ent16.insert(0, str(n16))
+    except ValueError:
+        lbl_not = tk.Label(win, text = 'It is not a Decimal Number!')
+        cvs.create_window(130, 100, window = lbl_not)
+        lbl_not.after(2000, lambda: lbl_not.destroy())
 
 # Entry window for Decimal
 ent10 = tk.Entry(win)
@@ -139,24 +174,29 @@ cvs.create_window(60, 150, window = lbl12)
 # Function fro entry in duodecimal number
 def b12(event):
     n10 = b12b10(ent12.get())
-    ent10.delete(0, tk.END)
-    ent10.insert(0, str(n10))
-    
-    n2 = b10b2(n10)
-    ent2.delete(0, tk.END)
-    ent2.insert(0, str(n2))
-    
-    n3 = b10b3(n10)
-    ent3.delete(0, tk.END)
-    ent3.insert(0, str(n3))
-    
-    n8 = b10b8(n10)
-    ent8.delete(0, tk.END)
-    ent8.insert(0, str(n8))
-    
-    n16 = b10b16(n10)
-    ent16.delete(0, tk.END)
-    ent16.insert(0, str(n16))
+    if n10 != -1:
+        ent10.delete(0, tk.END)
+        ent10.insert(0, str(n10))
+        
+        n2 = b10b2(n10)
+        ent2.delete(0, tk.END)
+        ent2.insert(0, str(n2))
+        
+        n3 = b10b3(n10)
+        ent3.delete(0, tk.END)
+        ent3.insert(0, str(n3))
+        
+        n8 = b10b8(n10)
+        ent8.delete(0, tk.END)
+        ent8.insert(0, str(n8))
+        
+        n16 = b10b16(n10)
+        ent16.delete(0, tk.END)
+        ent16.insert(0, str(n16))
+    else:
+        lbl_not = tk.Label(win, text = 'It is not a Duodecimal Number!')
+        cvs.create_window(130, 100, window = lbl_not)
+        lbl_not.after(2000, lambda: lbl_not.destroy())
 
 # Entry window for Duodecimal
 ent12 = tk.Entry(win)
@@ -170,24 +210,29 @@ cvs.create_window(60, 180, window = lbl16)
 # Function fro entry in hexadecimal number
 def b16(event):
     n10 = b16b10(ent16.get())
-    ent10.delete(0, tk.END)
-    ent10.insert(0, str(n10))
-    
-    n2 = b10b2(n10)
-    ent2.delete(0, tk.END)
-    ent2.insert(0, str(n2))
+    if n10 != -1:
+        ent10.delete(0, tk.END)
+        ent10.insert(0, str(n10))
+        
+        n2 = b10b2(n10)
+        ent2.delete(0, tk.END)
+        ent2.insert(0, str(n2))
 
-    n3 = b10b3(n10)
-    ent3.delete(0, tk.END)
-    ent3.insert(0, str(n3))
-    
-    n8 = b10b8(n10)
-    ent8.delete(0, tk.END)
-    ent8.insert(0, str(n8))
-    
-    n12 = b10b12(n10)
-    ent12.delete(0, tk.END)
-    ent12.insert(0, str(n12))
+        n3 = b10b3(n10)
+        ent3.delete(0, tk.END)
+        ent3.insert(0, str(n3))
+        
+        n8 = b10b8(n10)
+        ent8.delete(0, tk.END)
+        ent8.insert(0, str(n8))
+        
+        n12 = b10b12(n10)
+        ent12.delete(0, tk.END)
+        ent12.insert(0, str(n12))
+    else:
+        lbl_not = tk.Label(win, text = 'It is not a Hexadecimal Number!')
+        cvs.create_window(130, 100, window = lbl_not)
+        lbl_not.after(2000, lambda: lbl_not.destroy())
 
 # Entry window for Hexadecimal
 ent16 = tk.Entry(win)
