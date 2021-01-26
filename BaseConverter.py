@@ -15,7 +15,7 @@ def b3b10(n): # Requires Integer number as arguement
     r = 0
     i = 0
     while n > 0:
-        if n % 3 > 2:
+        if n % 10 > 2:
             return -1 # Not a ternary number
         r += (n%3) * 3 ** i
         n = int(n/10)
@@ -27,7 +27,7 @@ def b8b10(n): # Requires Integer number as arguement
     r = 0
     i = 0
     while n > 0:
-        if n % 8 > 7:
+        if n % 10 > 7:
             return -1 # Not an octal number
         r += (n%8) * 8 ** i
         n = int(n/10)
