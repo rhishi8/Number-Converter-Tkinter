@@ -8,7 +8,7 @@ def b2b10(n): # Requires Integer number as arguement
         r += (n%10) * 2 ** i
         n = int(n/10)
         i += 1
-    return r
+    return r # Returns Integer
 
 # Function to convert from base 3 & base 10
 def b3b10(n): # Requires Integer number as arguement
@@ -20,7 +20,7 @@ def b3b10(n): # Requires Integer number as arguement
         r += (n%3) * 3 ** i
         n = int(n/10)
         i += 1
-    return r
+    return r # Returns Integer
 
 # Function to convert from base 8 & base 10
 def b8b10(n): # Requires Integer number as arguement
@@ -31,7 +31,7 @@ def b8b10(n): # Requires Integer number as arguement
             return -1 # Not an octal number
         r += (n%8) * 8 ** i
         n = int(n/10)
-    return r
+    return r # Returns Integer
 
 # Function to convert from base 12 & base 10
 def b12b10(n): # Requires String as arguement
@@ -47,7 +47,7 @@ def b12b10(n): # Requires String as arguement
                 r += int(n[i]) * 12 ** (l-i-1)
             except ValueError:
                 return -1
-    return r
+    return r # Returns Integer
 
 # Function to convert from base 16 & base 10
 def b16b10(n): # Requires String as arguement
@@ -71,7 +71,7 @@ def b16b10(n): # Requires String as arguement
                 r += int(n[i]) * 16 ** (l-i-1)
             except ValueError:
                 return -1
-    return r
+    return r # Returns Integer
 
 # Function to convert from base 10 & base 2
 def b10b2(n): # Requires Integer number as arguement
@@ -79,26 +79,26 @@ def b10b2(n): # Requires Integer number as arguement
     while n > 0:
         r = str(n % 2) + r
         n = int(n/2)
-    return int(r)
+    return int(r) # Returns Integer
 
 # Function to convert from base 10 & base 3
-def b10b3(n):
+def b10b3(n): # Requires Integer number as arguement
     r = '0' if n == 0 else ''
     while n > 0:
         r = str(n % 3) + r
         n = int(n/3)
-    return int(r)
+    return int(r) # Returns Integer
 
 # Function to convert from base 10 & base 8
-def b10b8(n):
+def b10b8(n): # Requires Integer number as arguement
     r = '0' if n == 0 else ''
     while n > 0:
         r = str(n % 8) + r
         n = int(n/8)
-    return int(r)
+    return int(r) # Returns Integer
 
 # Function to convert from base 10 & base 12
-def b10b12(n):
+def b10b12(n): # Requires Integer number as arguement
     r = '0' if n == 0 else ''
     while n > 0:
         if n % 12 == 10:
@@ -108,10 +108,10 @@ def b10b12(n):
         else:
             r = str (n % 12) + r
         n = int(n/12)
-    return r
+    return r # Returns String
 
 # Function to convert from base 10 & base 16
-def b10b16(n):
+def b10b16(n): # Requires Integer number as arguement
     r = '0' if n == 0 else ''
     while n > 0:
         if n % 16 == 10:
@@ -129,4 +129,4 @@ def b10b16(n):
         else:
             r = str(n % 16) + r
         n = int(n/16)
-    return r
+    return r # Returns String
