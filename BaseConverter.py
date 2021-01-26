@@ -76,37 +76,30 @@ def b16b10(n): # Requires String as arguement
 # Function to convert from base 10 & base 2
 def b10b2(n): # Requires Integer number as arguement
     r = '0' if n == 0 else ''
-    i = 0
     while n > 0:
         r = str(n % 2) + r
         n = int(n/2)
-        i += 1
     return int(r)
 
 # Function to convert from base 10 & base 3
 def b10b3(n):
     r = '0' if n == 0 else ''
-    i = 0
     while n > 0:
         r = str(n % 3) + r
         n = int(n/3)
-        i += 1
     return int(r)
 
 # Function to convert from base 10 & base 8
 def b10b8(n):
     r = '0' if n == 0 else ''
-    i = 0
     while n > 0:
         r = str(n % 8) + r
         n = int(n/8)
-        i += 1
     return int(r)
 
 # Function to convert from base 10 & base 12
 def b10b12(n):
     r = '0' if n == 0 else ''
-    i = 0
     while n > 0:
         if n % 12 == 10:
             r = 'A' + r
@@ -115,13 +108,11 @@ def b10b12(n):
         else:
             r = str (n % 12) + r
         n = int(n/12)
-        i += 1
     return r
 
 # Function to convert from base 10 & base 16
 def b10b16(n):
     r = '0' if n == 0 else ''
-    i = 0
     while n > 0:
         if n % 16 == 10:
             r = 'A' + r
@@ -138,5 +129,4 @@ def b10b16(n):
         else:
             r = str(n % 16) + r
         n = int(n/16)
-        i += 1
     return r
