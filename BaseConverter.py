@@ -37,7 +37,6 @@ def b8b10(n): # Requires Integer number as arguement
 def b12b10(n): # Requires String as arguement
     r = 0
     l = len(n)
-    j = 0
     for i in range(l-1, -1, -1):
         if n[i] == 'a' or n[i] == 'A':
             r += 10
@@ -45,17 +44,15 @@ def b12b10(n): # Requires String as arguement
             r += 11
         else:
             try:
-                r += int(n[i]) * 12 ** j
+                r += int(n[i]) * 12 ** (l-i-1)
             except ValueError:
                 return -1
-        j += 1
     return r
 
 # Function to convert from base 16 & base 10
 def b16b10(n): # Requires String as arguement
     r = 0
     l = len(n)
-    j = 0
     for i in range(l-1, -1, -1):
         if n[i] == 'a' or n[i] == 'A':
             r += 10
@@ -71,10 +68,9 @@ def b16b10(n): # Requires String as arguement
             r += 15
         else:
             try:
-                r += int(n[i]) * 16 ** j
+                r += int(n[i]) * 16 ** (l-i-1)
             except ValueError:
                 return -1
-        j += 1
     return r
 
 # Function to convert from base 10 & base 2
